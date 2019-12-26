@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+        <div class="new"></div>
+
+
+
+
+<script>
+
+    
+
+    var num = setInterval(() => {print();}, 15000);
+
+    function print(){
+    var n = document.createElement("p"); //תיצור אלמנט מסוג פסקה בשם נ
+    var text = document.createTextNode("Thank you for waiting! No one in their right mind would wait for so long for a webpage to load");      //תיצור אלמנט מסוג טקסט שבו רשום המספר נומ ותרא לו בשם טקסט
+    n.appendChild(text);// תציב את טקסט בתור הילד של נ
+    document.querySelector(".new").appendChild(n); // תיקח את נ ואת טקסט ותציב אותו בתור הילד של new
+    }
+    
+    
+    </script>
+
+
+</body>
+</html>

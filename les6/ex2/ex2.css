@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+}
+
+.box{
+    height: 1000px;
+    width: 100%;
+    border: black 2px solid;
+
+}
+
+.big{
+    display: flex;
+    margin: 0;
+
+}
+
+
+ .right{
+    display: flex;
+    height: auto;
+    align-items: center;
+    flex: 3;
+ }
+ .left{
+    display: flex;
+    align-items: flex-end;
+    width: 25%;
+    text-align: center;
+    height: auto;
+
+ }

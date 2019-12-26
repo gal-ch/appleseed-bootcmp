@@ -1,0 +1,73 @@
+.header{
+    display: grid;
+    justify-content: space-between;
+    height:60px;
+    background-image: linear-gradient( white, #d3d3d333);
+    align-items: center;
+    padding-right:70px;
+    position: relative;
+
+}
+.header img{ /*logo*/
+    height:54px;
+    left:10px;
+}
+
+
+ .header .menu-items{
+    margin-left: 70%;
+ }   
+    
+.header .menu-items a{
+    color:black;
+    font-family:Arial, sans-serif;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-left: 15px;
+}
+.header .social-items a{
+    color:#8de3ff;
+    text-decoration: none;
+
+    margin: 0 10px 0 10px;
+}
+
+.menu-items{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+.ham{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left:90%;
+
+}
+
+.hamburger-slice{
+    width: 30px;
+    height: 5px;
+    background-color: black;
+
+}
+.hamburger-slice.meat{
+    margin: 5px 0;
+}
+
+/*
+@media screen and (max-width: 1024px){
+    .menu-items {
+    display: none;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .ham {
+    display: none;
+    }
+}

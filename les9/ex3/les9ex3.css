@@ -1,0 +1,44 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+
+.allblock>div{
+    width: 700px;
+    height: 400px;
+    background: blue;
+   position: fixed;
+    margin: 10px;
+    opacity: 1;
+    animation-delay: 0.5s;
+}
+
+@keyframes move-in-steps{
+  
+0% {
+    top: 100px;
+    background: red;
+  }
+  50% {
+    top: 200px;
+    background: red;
+  }
+  100% {
+    top: 400px;
+    background: red;
+  }
+
+}
+.block:hover{
+
+animation: "ease-in-out";
+opacity: 1;
+animation: move-in-steps 2s steps(4);
+animation-timing-function: linear;
+
+}

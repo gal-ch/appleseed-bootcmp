@@ -1,0 +1,51 @@
+section {
+    height: 200px;
+    border: blue 1px solid;
+}
+
+nav {
+    border: blue 1px solid;
+    height: 100px;
+    position: relative;
+}
+
+nav .logo {
+    left: 3%;
+}
+
+nav .logo img {
+    width: 100px;
+}
+
+nav .nav, nav .ham {
+    right: 3%;
+}
+
+nav div {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+nav .ham img {
+    width: 20px;
+}
+
+nav .nav {
+    display: none;
+}
+
+@media (min-width: 496px) {
+    nav .nav {
+        display: block;
+    }
+    nav .ham {
+        display: none;
+    }
+}
+
+@media (min-width: 680px) {
+    nav .nav {
+        background-color: goldenrod;
+    }
+}

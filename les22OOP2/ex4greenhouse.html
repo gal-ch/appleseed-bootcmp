@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Greenhouse{
+            constructor (season,color, blossom)
+            {
+            this.season = season;
+            this.color = color;
+            this.blossom = blossom;
+            }
+        }
+        let getPlantsBySeason = (plants, chooseseason) =>{
+            let arrey= [];
+            arrey = plants.filter(plant => plant.season === chooseseason && plant.blossom === true);
+            console.log(arrey);
+            
+        }
+
+
+
+
+
+
+const flower1 = new Greenhouse("sumemr", "white", true)
+const flower2 = new Greenhouse("summer", "blue", false)
+const flower3 = new Greenhouse("winter", "green", true)
+const flower4 = new Greenhouse("winter", "black", true)
+const plants =[flower1, flower2, flower3, flower4];
+getPlantsBySeason(plants, "winter")
+
+
+
+
+
+    
+    
+    
+    
+    </script>
+</body>
+</html>

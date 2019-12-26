@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+
+.allblock>div{
+    width: 100px;
+    height: 60px;
+    background: red;
+    left: 10px;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    margin: 10px;
+}

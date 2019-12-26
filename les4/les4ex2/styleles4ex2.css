@@ -1,0 +1,24 @@
+.features.stripe .item{
+    vertical-align: top;
+    text-align: left;
+    color: bisque;
+    display: inline-block;
+    background: green;
+    width: 20%;
+    
+
+}
+
+.features.stripe .item .title{
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 701px){
+    .features.stripe .item{
+    display: block;
+    width: 50%;
+    margin: 10px ;
+    }
+
+}

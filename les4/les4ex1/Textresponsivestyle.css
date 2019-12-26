@@ -1,0 +1,15 @@
+
+
+
+@media  screen and (min-width: 778px) {
+    .textsomthing{
+        font-size: 80px;
+    }
+}
+
+
+@media  screen and (max-width: 779px) {
+    .textsomthing{
+        font-size: 50px;
+    }
+}

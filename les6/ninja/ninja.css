@@ -1,0 +1,52 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+.flex-child{
+    width: 50px;
+    height: 50px;
+    background-color:black;
+    margin: 2px;
+}
+
+.main{
+    width: 100px;
+    height: 100px;
+    background-color:blanchedalmond;
+    margin: 1px;
+    
+}
+.big{
+   background-color: pink;
+   display: flex;
+   flex-direction: column;
+}
+
+.up{
+    display: flex;
+    align-items: flex-start;
+}
+
+.alls{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.four{
+    display: flex;
+    align-content: center;
+    flex: 1;
+
+}
+
+.five{
+    flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class CarCompany {
+            constructor(location, models)
+            {
+                this.location = location;
+                this.models = models;
+            }}
+            let printModels=(carsi)=>{
+                let array=[];
+                array = carsi.map((index)=>index.models);
+                console.log(array);
+                
+            }
+        
+        let car1 = new CarCompany("grmny", "Alto");
+        let car2 = new CarCompany("Japanese", "Baleno");
+        let car3 = new CarCompany("Suzuki", "Swift");
+        let cars =[car1, car2, car3];
+        printModels(cars);
+        
+        
+        
+        
+        
+        
+        </script>
+</body>
+</html>

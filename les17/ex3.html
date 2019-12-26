@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">try and stop me!</button>
+    <div id="num">
+        <div class="new"></div>
+        <br>  
+    </div>
+   
+
+    <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener('click', stop);
+
+        function printNum() {
+            var num = 0;
+            return function private() {
+                num++;
+                var n = document.createElement("p"); //תיצור אלמנט מסוג פסקה בשם נ
+                var text = document.createTextNode(num); //תיצור אלמנט מסוג טקסט שבו רשום המספר נומ ותרא לו בשם טקסט
+                n.appendChild(text);// תציב את טקסט בתור הילד של נ
+                document.querySelector(".new").appendChild(n); // תיקח את נ ואת טקסט ותציב אותו בתור הילד של new
+            }
+        }
+        var countnum = printNum();
+        var myfun = setInterval(() => {countnum();}, 1000);
+
+
+        function stop() {
+            clearInterval(myfun);
+        }
+
+
+    </script>
+
+</body>
+
+</html>

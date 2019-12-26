@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Movie{
+            constructor(title, director)
+            {
+                this.title = title;
+                this.director = director;
+
+            }
+            toString()
+            {
+                console.log("the movie "+ this.title+ " the director is "+ this.director);
+                
+                return("the movie "+ this.title + " the director is " + this.director)
+
+            }
+        }
+        let movie1 = new Movie ("i need a vaction", "gal hadad")
+        let movie2 = new Movie ("urgent!", "gal hadad")
+        movie1.toString();
+        movie2.toString();
+        console.log(Movie);
+        
+    
+    
+    
+    
+    </script>
+</body>
+</html>

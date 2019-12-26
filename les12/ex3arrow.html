@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function test_equal(actual, expected, msg) {
+            if (actual !== expected) {
+                console.log(`Error testing ${msg || ''}. expected: ${expected}, got ${actual}`)
+            }
+        }
+        var testMin = (a, b) => a > b ? b : a;
+        test_equal(testMin(-100, 3), -100);
+        test_equal(testMin((45, 43), 43));
+        const testSubstring = (bigword, smallword) => bigword.indexOf(smallword) !== -1 ? true : false;;
+        test_equal(testSubstring( "ES6 is great", "eat"), true);
+        test_equal(testSubstring( "ES6 is great", "ES7"), false);
+        test_equal(testSubstring( "momomomomom", "omom"), true);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+
+<!--
+var  subi = (bigword,smallword) => {
+    var a = str(bigword);
+    var b = str(smallword);
+    for (i = 0; i < array.length; i++) { 
+       str = array[i];
+       n = a.includes(b);
+       if(n === true)
+          return true;
+       else
+           return false; 
+} 
+
+subi("hello world", "hell");

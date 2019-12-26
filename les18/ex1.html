@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="my-page">
+            <p><a class="one a" href="https://www.w3schools.com">Visit W3Schools.com!</a></p>
+            <p><a class="two a" href="https://www.w3schools.com">Visit W3Schools.com!</a></p>
+            <p><a class="three a" href="https://www.w3schools.com">Visit W3Schools.com!</a></p>
+    </div>
+
+
+    <script>
+    
+    let q_one =$(".a");
+
+    q_one.css("font-family","Courier New");
+    let q_two = $(".two");
+    q_two.attr("href","https://www.itc.tech");
+    $("p:nth-child(3)").css("background-color", "salmon");
+    $("body").css("background-color", "lightblue");
+
+
+    </script>
+    
+    
+    
+    
+   
+</body>
+</html>

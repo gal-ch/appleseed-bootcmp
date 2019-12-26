@@ -1,0 +1,31 @@
+.body{
+    margin: 10px;
+}
+.menu{
+    padding: 15px;
+    text-align: center;
+}
+.content1 {
+    overflow: hidden;
+    background-color: #394; /*topnav color*/
+    margin-left: 400px;
+    height: 50px;
+    width: 100px;
+
+
+}
+
+.content1 a{
+    float: none;
+    display: inline-block;
+    color: goldenrod;
+    text-align: center;
+    padding: 30px 30px 30px 30px;
+    text-decoration-color: hotpink;
+
+}
+
+.content a:hover {
+    background-color: #f2f2d3;
+    color: black;
+  }

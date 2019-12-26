@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="my_painter">
+        <div id ="red" style="border-block: 2px solid red; width: 30px; height: 30px;position: fixed;background-color: red;"></div>
+        <div id ="blue"></div>
+    </div>
+
+<script>
+
+var red_color = document.querySelector('#red');
+red_color.addEventListener('click', addTheColor);
+
+function addTheColor(){
+    var n = document.createElement("div") //תיצור אלמנט מסוג פסקה בשם נ
+    var color_name = document.createElement("color").style.backgroundColor = 'red'
+    n.appendChild(color_name );// תציב את טקסט בתור הילד של נ
+    document.querySelector(".my_painter").appendChild(n); // תיקח את נ ואת טקסט ותציב אותו בתור הילד של new
+
+}
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

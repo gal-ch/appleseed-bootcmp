@@ -1,0 +1,24 @@
+.pizza-wrapper{
+    text-align: center;  
+    flex: 3;
+    
+  }
+  .pizza{
+      height: 500px;
+      width: 500px;
+      background-image: url('https://storage.pizzapizza.ca/phx2/ppl_images/category/en/2x/create_your_own.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: auto;
+  }
+  .cotainer{
+      display: flax;
+      flex-direction: row;
+      justify-content: flex-start;
+  }
+  .side-manu{
+      height: 100vh;
+      background-color: aquamarine;
+      text-align: center;
+
+  }

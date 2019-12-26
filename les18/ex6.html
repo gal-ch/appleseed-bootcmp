@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <input type=text value="" />
+    <input type=text value="" />
+    <input type=text value="" />
+    <input type=text value="" />
+    <div class="results"></div>
+
+
+
+    <script>
+
+        var text = "";
+        $("input").keyup(function () {
+            for (var i = 0; i < $(this).val().length; i++) {
+                console.log(text);
+                text = " "+$(this).val();
+                console.log(text);
+                $(".results").text(text);
+            }
+
+
+        });
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="texting" style="font-size: 6px;">style</div>
+
+        <button class="pluse btn">+</button>
+        <button class="min btn">-</button>
+
+    <script>
+
+        var buttonElements = document.getElementsByClassName('btn');
+        console.log(buttonElements);
+        var pluse = buttonElements[0];
+        var min = buttonElements[1];
+        console.log(min);
+        pluse.addEventListener('click', changeFontP);
+        min.addEventListener('click', changeFontM);
+        function changeFontP() 
+        {
+            txt = document.getElementById('texting');
+            style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+            currentSize = parseFloat(style);
+            txt.style.fontSize = (currentSize + 1) + 'px';
+            console.log(texting.style.fontSize);
+             
+        }
+        function changeFontM() 
+        {
+            txt = document.getElementById('texting');
+            style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+            currentSize = parseFloat(style);
+            txt.style.fontSize = (currentSize - 1) + 'px';
+            console.log(texting.style.fontSize);
+             
+        }
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

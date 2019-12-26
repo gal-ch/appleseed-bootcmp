@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img id="imgoff" src="lightoff.jpg" alt="lightoff" onclick="myfunction()" />
+
+
+    <script>
+        function myfunction() 
+        {
+            if (document.querySelector("#imgoff").src.match("lightoff.jpg")) 
+            {
+                document.querySelector("#imgoff").src = "lighton.jpg";
+            }
+
+            else{
+                document.querySelector("#imgoff").src = "lightoff.jpg";
+
+            }
+
+        }
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

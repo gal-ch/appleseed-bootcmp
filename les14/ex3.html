@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>why do to you want the job?</p>
+    <button onclick="check();">click here!</button>
+    <textarea  id="word" rows="50" cols="40" >enter your text</textarea>
+    
+    <script>
+    function check(){
+        var numOfWord = document.getElementById("word").value.length;
+        if (numOfWord < 100)
+           console.log("please tell us more");
+           document.write("please tell us more");
+    }
+    </script>
+
+</body>
+</html>

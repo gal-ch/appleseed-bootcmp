@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let myobj = {
+            name: "gal",
+            printName: function () {
+                console.log(this.name);
+            },
+            printNameAfterSec: function () {
+                setTimeout( function(){ myobj.printName();}, 6000);
+
+            }
+        }
+        myobj.printName();
+        let myfun = myobj.printNameAfterSec;
+        myfun();
+
+    </script>
+</body>
+
+</html>

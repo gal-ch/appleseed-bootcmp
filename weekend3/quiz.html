@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href=quiz.css>
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="ques_and_ans_base">
+        <div class="question base">
+            <h1>are you addicted to your phon?</h1>
+        </div>
+        <div class="answers">
+            <div class="first A">
+                <input type="image" id="oneAns base" alt="Login" src="base_1.jpg" height="250" width="250"
+                    onclick="firstQuestion();" />
+            </div>
+            <div class="second A">
+                <input type="image" id="twoAns base" alt="Login" src="base_2.jpeg" height="250" width="250"
+                    onclick="firstQuestion();" />
+            </div>
+            <div class="third A">
+                <input type="image" id="threeAns base" alt="Login" src="base_3.jpeg" height="250" width="250"
+                    onclick="firstQuestion();" />
+            </div>
+            <div class="fourth A">
+                <input type="image" id="fourAns base" alt="Login" src="base_4.jpg" height="250" width="250"
+                    onclick="firstQuestion();" />
+            </div>
+        </div>
+    </div>
+
+    <!--------------first questio image ------------->
+    <div id="ques_and_ans_one" style="display: none;">
+        <div class="question one">
+            <h1>׳ Which activity you like to do the most?</h1> 
+        </div>
+        <div id="answers">
+            <div class="first A">
+                <input type="image" id="oneAnsImage" value="5" alt="Login" src="1_1.jpg" height="250" width="250"
+                    onclick="secoundQuestion();" />
+            </div>
+            <div class="second A">
+                <input type="image" id="twoAnsImage" value="50" alt="Login" src="1_2.jpg" height="250" width="250"
+                    onclick="secoundQuestion();" />
+            </div>
+            <div class="third A">
+                <input type="image" id="threeAnsImage" value="40" alt="Login" src="1_3.jpg" height="250" width="250"
+                    onclick="secoundQuestion();" />
+            </div>
+            <div class="fourth A">
+                <input type="image" id="fourAnsImage" value="10" alt="Login" src="1_4.jpg" height="250" width="250"
+                    onclick="secoundQuestion();" />
+            </div>
+        </div>
+    </div>
+
+    <!--------------secound question radio ------------->
+    <div id="ques_and_ans_two" style="display: none;">
+
+        <div class="question two"><h1  style="text-align: center;"> youre in the middel of some errands and your phon is dead , what will you do?</h1> 
+         </div>
+        <div id="answers">
+            <div class="first A">
+                <label> <input type="radio" id="oneAnsRadio" value="10" alt="Login" src="1.jpg" height="250" width="250"
+                        onclick="thirdQuestion();" />if i find a place a to chrage it, i will and if not i wiil continue
+                    with my day without it </label>
+            </div>
+            <div class="second A">
+                <label> <input type="radio" id="twoAnsRadio" value="40" alt="Login" src="1.jpg" height="250" width="250"
+                        onclick="thirdQuestion();" />stope evrythings and go home</label>
+            </div>
+            <div class="third A">
+                <label> <input type="radio" id="threeAnsRadio" value="0" alt="Login" src="1.jpg" height="250"
+                        width="250" onclick="thirdQuestion();" />it not my phon, i forgot mine at home</label>
+            </div>
+            <div class="fourth A">
+                <label> <input type="radio" id="fourAnsRadio" value="50" alt="Login" src="1.jpg" height="250"
+                        width="250" onclick="thirdQuestion();" />there is no way that will happes to me, i also have two
+                    phon with me at all time</label>
+            </div>
+        </div>
+
+    </div>
+    <!--------------third question chack box------------->
+    <div id="ques_and_ans_three" style="display: none;">
+        <div class="question three"><h1> you eating with your family, where is your phon</h1> </div>
+        <div id="answers">
+            <div class="first A">
+                <label> <input type="checkbox" id="oneAns checkbox" value="0" alt="Login" src="1.jpg" height="200"
+                        width="150" onclick="fourthQuestion();" /> i dont know</label>
+            </div>
+            <div class="second A">
+                <label> <input type="checkbox" id="twoAns checkbox" value="30" alt="Login" src="1.jpg" height="200"
+                        width="150" onclick="fourthQuestion();" />charging</label>
+            </div>
+            <div class="third A">
+                <label> <input type="checkbox" id="threeAns checkbox" value="50" alt="Login" src="1.jpg" height="200"
+                        width="150" onclick="fourthQuestion();" />next me on the table </label>
+            </div>
+            <div class="fourth A">
+                <label> <input type="checkbox" id="fourAns checkbox" value="40" alt="Login" src="1.jpg" height="200"
+                        width="150" onclick="fourthQuestion();" />Which one?</label>
+            </div>
+        </div>
+    </div>
+    <!--------------fourth question text------------->
+    <div id="ques_and_ans_four" style="display: none;">
+        <div class="question four"><h1> how often you charge your phon? </h1> </div>
+        <div id="answers">
+            <div class="first A">
+                <button type="button" value="10" onclick="fifthQuestion();" id="oneAns button"
+                    style="height: 50px;width: 100px">over night</button>
+            </div>
+            <div class="second A">
+                <button type="button" value="40" onclick="fifthQuestion();" id="twoAns button"
+                    style="height: 50px;width: 100px">two times a day</button>
+            </div>
+            <div class="third A">
+                <button type="button" value="0" onclick="fifthQuestion();" id="threeAns button"
+                    style="height: 50px;width: 100px">once in tow days</button>
+            </div>
+            <div class="fourth A">
+                <button type="button" value="50" onclick="fifthQuestion();" id="fourAns button"
+                    style="height: 50px;width: 100px">cant count </button>
+            </div>
+        </div>
+    </div>
+    <!--------------fifth question buttons------------->
+    <div id="ques_and_ans_five" style="display: none;">
+        <div class="question five"><h1> what kind of phon you have?</h1> 
+           </div>
+        <div id="answers">
+            <div class="first A">
+                <button type="button" value="50" onclick="result();" id="oneAns button"
+                    style="height: 50px;width: 100px">Galaxy S11</button>
+            </div>
+            <div class="second A">
+                <button type="button" value="0" onclick="result();" id="twoAns button"
+                    style="height: 50px;width: 100px">some nokia</button>
+            </div>
+            <div class="third A">
+                <button type="button" value="40" onclick="result();" id="threeAns button"
+                    style="height: 50px;width: 100px">iphon</button>
+                    
+            </div>
+            <div class="fourth A">
+                <button type="button" value="10" onclick="result();" id="fourAns button"
+                    style="height: 50px;width: 100px">xiaomi somthing</button>
+                    
+            </div>
+        </div>
+    </div>
+    <div id="ques_and_ans_result" >
+        <div class="question result" style="display: none;">Your Diagnosis:<span id="num"></span>
+             </div>
+        <div id="answers">
+            <div class="res_one A" style="display: none;" >
+                0-50 point: you do not have phonddiction, you will be fine when people will become phonzombies.
+
+            </div>
+            <div class="res_two A"style="display: none;">
+               55-120 point: you need your phon but it is not necessity.
+
+            </div>
+            <div class="res_three A" style="display: none;" >
+              125-200 point: im sorry to tell you that you are addicted and you some halp, before its too late
+
+            </div>
+            <div class="res_four A" style="display: none;">
+              205-250 point: you probably dont see it, becuse you on your phon, you always on your phon.
+            </div>
+        </div>
+    </div>
+
+  
+
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+.dot {
+    height: 100px;
+    width: 100px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.box{
+    border: pink solid 2px;
+}
+
+.big, .up{
+    display: flex;
+    flex-direction:column;
+}
+
+.dot{
+     margin-top: 30px;/*is there another way? can i tell to bring it to center of th row? */
+    order: 1;
+
+}
+.text{
+    order: 2;
+    text-align: center;
+    margin: 50px;
+}
+
+.flex-child{
+    width: 50px;
+    height: 10px;
+    background-color:pink;
+    margin: 2px;
+}
+
+.down{
+    display: inline-flex;
+    justify-content: space-between;
+
+}
+.down>div{
+    margin: 50px;
+
+}
+.line{
+    justify-content: flex-end;
+    flex-direction: row ;
+    display: flex;  
+    box-sizing: border-box;
+}
+

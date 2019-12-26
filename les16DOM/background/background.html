@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>First Page!</title>
+    <style>
+        #buttons {
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="buttons"></div>
+    <div>
+        <button id="btn1">1</button>
+        <button id="btn2">2</button>
+        <button id="btn3">3</button>
+    </div>
+
+    <script>
+        let buttons1 = () => {
+            document.querySelector('#buttons').style.backgroundImage = "url('1_1.jpg')";
+        }
+        let buttons2 = () => {
+            document.querySelector('#buttons').style.backgroundImage = "url('1_4.jpg')";
+        }
+        let buttons3 = () => {
+            document.querySelector('#buttons').style.backgroundImage = "url('cover.jpg')";
+        }
+
+        btn1.addEventListener('click',buttons1);
+        btn2.addEventListener('click', buttons2);
+        btn3.addEventListener('click', buttons3);
+
+
+
+
+    </script>
+</body>
+
+</html>

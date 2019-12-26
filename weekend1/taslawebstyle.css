@@ -1,0 +1,222 @@
+
+/*ganrel settings for all background*/
+
+body, html {
+    height: 100%;
+    margin: 0;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+  
+* {
+    box-sizing: border-box;
+}
+
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+  
+.bg-image {
+   height: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: fixed;
+
+
+}
+
+  .img1 { background-image: url("homepage1.jpg"); }
+  .img2 { background-image: url("PowerEverything.jpg"); }
+  .img3 { background-image: url("wheel.jpg"); }
+  .img4 { background-image: url("tesla-model-y.jpg"); }
+  
+/*location of the top manu*/
+.header .items, #home{ 
+    margin-top: 1%;
+    position: absolute;
+    display: inline-block;
+    vertical-align: top;
+}
+/*tasle home page location*/
+#home{ 
+    margin-left: 3vh;
+}
+
+
+a{ /*color,spacing,decoartion of all text*/
+color: white;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 14px;
+
+}
+.manu>a{ /*satting top manu expet tasle*/
+    padding-left: 15px;
+
+}
+/*hamburger setting*/
+.hamburger-slice{
+
+    width: 20px;
+    height: 2px;
+    background-color: white;
+
+}
+.hamburger-slice.meat{
+    margin: 3px 0;
+}
+
+.header .ham{
+     
+    position: absolute;
+    margin-top: -32px;
+    margin-left: 115px;
+}
+.ham>ul{
+    list-style-type:none; 
+}
+
+/*move all text to the center*/
+.manu, .modlename, .modleinfo>a, .titels, .footer{ 
+    vertical-align: top;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+
+
+}
+/*location of sign in and shop*/
+.left-manu{
+     margin-left: 85%;
+     padding-right: 65px;
+
+}
+
+.left-manu>a{
+    padding-left: 7px;
+}
+
+/*location of modle x*/
+.img1 .modlename{
+    position: absolute;
+    top: 15%;
+    font-size: 20px;
+}
+
+/*satting of the canter manu img1*/
+.img1 .modleinfo>a{
+    border: white 4px solid;
+    border-radius: 4.6vh;
+    padding: 1.5vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    margin-left: 1.5vh;
+}
+
+/*location of visit store  img1*/
+.img1 .storeinfo{
+    text-decoration-line: underline;
+    margin-top: -10px;
+    padding: 30px;
+}
+/*location of footer  img1*/
+.img1 .footer{
+    font-family: sans-serif;
+    color: white;
+    font-size: 12px;
+    position: fixed;
+    margin-top: 550px;
+}
+.img1 .footer>h4{
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.img2 .titels, .img3 .titels, .img4 .titels{
+    color: white;
+    position: absolute;
+    text-align: center;
+    margin-top: 5%;
+    font-size:20px;
+
+}
+
+.img2 .titels>h5{
+
+    margin-top: -7%;
+    margin-bottom: 10%;
+    font-weight: 100;
+}
+
+.img2 .titels>h1, .img3 .titels>h1, .img4 .titels>h1, .img1 .modlename>h1{
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/*border satting for all img*/
+.order>a{
+    border: white 4px solid;
+    border-radius: 30px;
+    border: white 4px solid;
+    border-radius: 30px;
+    padding: 7px;
+    padding-left: 75px;
+    padding-right: 75px;
+    background:#fff;
+    color: black;
+    font-size: 12px;
+}
+
+.img4{
+    position: relative;
+    background-position-x: 0px;
+    height: 85%;
+}
+
+
+/*location of vfooter  img4*/
+.footerinfo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.footerinfo>a{
+    margin-left: 15px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1000px){
+    .header .items{
+    display: none;
+    }
+
+    .img1 .modleinfo{    
+        display: inline-block;
+        vertical-align: top;
+        margin-left: -40vh;
+        margin-top: 15%;
+    }
+    .footerinfo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: -50px;
+    }
+    .footerinfo>a{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 10px;
+    }
+
+}
+
+
+

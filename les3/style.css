@@ -1,0 +1,75 @@
+.body {
+    margin: 0px;
+}
+
+.stripe {
+
+    border: blue 1px solid;
+    text-align: center;
+    font-family: monospace;
+}
+
+.menu {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+
+}
+
+.menu .menu-entry {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.menu img.menu-entry {
+    widows: 30px;
+    height: 30px;
+
+}
+
+.promo {
+    height: 200px;
+    background-image: url('https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.featured {
+    height: 100px;
+}
+
+.featured .featured-item {
+    background-image: url('https://media.wired.com/photos/5926ff707034dc5f91bed4cc/master/pass/iPhoneSE-ft.jpg');
+    background-size: cover;
+    background-position: center;
+    border: green 1px solid;
+    display: inline-block;
+    width: 24%;
+    height: inherit
+
+
+}
+
+.iwatch {
+    background-image: url('https://media.wired.com/photos/5926ff707034dc5f91bed4cc/master/pass/iPhoneSE-ft.jpg');
+}
+
+
+
+.ipad {
+    background-image: url('https://media.wired.com/photos/5926ff707034dc5f91bed4cc/master/pass/iPhoneSE-ft.jpg');
+}
+
+
+.Pencil {
+    background-image: url('https://media.wired.com/photos/5926ff707034dc5f91bed4cc/master/pass/iPhoneSE-ft.jpg');
+}
+
+
+.imac {
+    background-image: url('https://media.wired.com/photos/5926ff707034dc5f91bed4cc/master/pass/iPhoneSE-ft.jpg');
+}

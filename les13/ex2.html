@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let books = [
+            book1 =
+            {
+                book_name: "i dont know1",
+                autor: "Gal Hadad1",
+                year: 1991,
+
+            },
+            book2 =
+            {
+                book_name: "i dont know2",
+                autor: "Gal Hadad2",
+                year: 1992,
+
+            }
+        ];
+        let bookUtils = {
+            getFirstPublished: function (book1, book2) {
+                return (Math.min(book1.year, book2.year));
+            },
+            setNewEdition: function (book1, edition_year) {
+                for (const book of books)
+                    if (book1.latestEdition = edition_year)
+                        return book;
+            },
+            setLanguage: function (book1, language) {
+                for (const book of books)
+                    if (book1.language = language)
+                        return book1.language;
+            },
+
+            setTranslation: function (book1, language, translator) {
+                for (const book of books)
+                    if (book1.translation)
+                    {
+                        translation={
+                            language:language,
+                            translator:translator,
+                        }
+                    }
+                        return book1.translation;
+            },
+            setPublisher: function (book1, name, location) {
+                for (const book of books)
+                    if (book1.publisher = name + location)
+                        return book1.publisher;
+            },
+            isSamePublisher: function (book1, book2) {
+                if (book1.publisher === book2.publisher)
+                {
+                    return true;
+                }
+                else{
+                    return false;
+                }
+
+            },
+        };
+
+        bookUtils.setLanguage(book1, "Russian");
+        bookUtils.setTranslation(book1, "chinese", "Han Liu");
+        bookUtils.setPublisher(book1, "Keter", "Tel Aviv");
+        bookUtils.isSamePublisher(book1, book2), false;
+
+
+    </script>
+</body>
+
+</html>

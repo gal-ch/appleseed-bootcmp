@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Account{
+            constructor(sum)
+            {
+                this.sum = sum;
+            }
+
+        
+        deposit(value){
+            this.sum = this.sum + value;
+
+        
+        }
+        withdraw(value) {
+            this.sum = this.sum - value;
+
+        }
+        canWithdraw(value) {
+            return (this.sum - value >= 0);
+        }
+        }
+        let lottery = (account) =>
+        {
+            if (!account.canWithdraw(100))
+            {
+                console.log("sorry no can do");
+                return;
+            }
+            else{
+            let val = Math.floor(Math.random() * 101);
+            let randomWonLose = Math.floor(Math.random() * 2); 
+            if (randomWonLose === 1)
+            {
+                let total =val + 30;
+                account.deposit(total);
+            }
+            else {
+                let total =val - 30;
+                account.deposit(total);
+            }}
+            console.log(account.sum);
+            
+
+        }
+        
+        let myaccount = new Account (1000);
+        for (let index = 0; index < 5; index++) {
+            lottery(myaccount);
+        }
+    </script>
+</body>
+</html>

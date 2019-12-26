@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let book = [
+            {
+                book_name: "i dont know",
+                autor: "Gal Hadad",
+                year: 1990,
+                genre: "rom-com",
+                Publishing: "lele",
+            },
+            {
+                book_name: "i dont know1",
+                autor: "Gal Hadad1",
+                year: 1991,
+                genre: "rom-com1",
+                Publishing: "lele1",
+            }
+        ];
+
+
+        function getBookDescription() {
+            var bookdet="" ;
+            
+
+            for (const x of book) {
+                bookdet += 'the book ' + x.book_name + ' was written by ' + x.autor + ' in the year ' + x.year;
+            }
+            return bookdet;
+        }
+        console.assert(getBookDescription(book));
+    </script>
+</body>
+
+</html>
+
+

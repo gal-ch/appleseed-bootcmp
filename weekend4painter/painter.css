@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-image: url('painter.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.continer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-painterPage {
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    border: rgb(44, 38, 38) 2px solid;
+
+}
+
+.all-colors {
+    display: inline-flex;
+}
+
+
+.chooseColor,
+.eraser {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+
+}
+
+.can-size {
+    margin-top: 20px;
+}
+
+.colorOnCanves {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: black;
+
+}

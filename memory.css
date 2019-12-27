@@ -1,0 +1,26 @@
+
+*{
+    box-sizing: border-box;
+}
+body, html{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+#container .backAndFront{
+	display: inline-flex;
+	justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 100px;
+}
+
+
+.flipped {
+    display: none;
+}
+
+.backAndFront img {
+    position: absolute;
+}

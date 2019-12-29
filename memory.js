@@ -1,124 +1,136 @@
 
-let CardsIsOpenWait = false;
+
 let PreviousCard = null;
 let isProcessing = null;
-let flippedCouplesCount = 0;
+let CardsIsOpenWait = false;
+var imgcard = ['./cards/1.jpeg', './cards/2.jpeg', './cards/3.jpeg', './cards/4.jpeg', './cards/5.jpeg', './cards/6.jpeg', './cards/7.jpeg', './cards/8.jpeg', './cards/9.png', './cards/10.jpeg', './cards/11.jpeg', './cards/12.jpg', './cards/13.jpg', './cards/14.jpeg', './cards/1.jpeg', './cards/2.jpeg', './cards/3.jpeg', './cards/4.jpeg', './cards/5.jpeg', './cards/6.jpeg', './cards/7.jpeg', './cards/8.jpeg', './cards/9.png', './cards/10.jpeg', './cards/11.jpeg', './cards/12.jpg', './cards/13.jpg', './cards/14.jpeg'];
 
-function displayCard() {
-//dont flip if prvioues cards is opens      
+/*----------shuffle the image array----------*/
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+
+/*----------display the card if it match----------*/
+function displayCard(arrDiv) {
+    console.log(this);
+    //dont flip if prvioues cards is opens      
     if (CardsIsOpenWait === true) {
         return;
     }
-// If the user clicked an already flipped card - do nothing and return from the function
-    if (newImage.classList.contains('flipped')) {
+    // If the user clicked an already flipped card - do nothing and return from the function
+    let card = this.children[0];
+    let cardBack = this.children[1];
+    console.log(card);
+    if (cardBack.classList.contains('flipped')) {
         return;
     }
-    newImage.classList.add('flipped');
+    cardBack.classList.add('flipped');
     if (PreviousCard === null) {
-        PreviousCard = newImage;
+        PreviousCard = this.children[0];
+        PreviousBack = this.children[1];
+        console.log(PreviousCard);
     }
-// get the value from both card
+    // get the value from both card
     else {
         let card1 = PreviousCard.getAttribute('data');
-        let card2 = newImage.getAttribute('data');
-// no match--> count one sec and than fllip them back
-        if(card1 !== card2)
-        {
-                isProcessing = 0;
-                setTimeout(function () {
-                    newImage.classList.remove('flipped');
-                    PreviousCard.classList.remove('flipped');
-                    isProcessing = 0;
-                    PreviousCard = null;
-                }, 1000)
-                isProcessing = 1;
+        let card2 = this.children[0].getAttribute('data');
+        // no match--> count one sec and than fllip them back
+        if (card1 !== card2) {
+            CardsIsOpenWait = false;
+            setTimeout(function () {
+                cardBack.classList.remove('flipped');
+                PreviousBack.classList.remove('flipped');
+                CardsIsOpenWait = false;
+                PreviousCard = null;
+            }, 1000)
+            CardsIsOpenWait = true;
         }
-// it a match!
-        else
-        {
-            flippedCouplesCount++;
+        // it a match!
+        else {
+       //     arrDiv[index].lastElementChild.classList.add('flipped');
+            countTheFlippCard();
             PreviousCard = null;
         }
     }
-}
-
-
-var imgcard = ['./cards/1.jpeg', './cards/2.jpeg','./cards/3.jpeg','./cards/4.jpeg','./cards/5.jpeg','./cards/6.jpeg','./cards/7.jpeg','./cards/8.jpeg','./cards/9.png','./cards/10.jpeg','./cards/11.jpeg','./cards/12.jpg','./cards/13.jpg','./cards/14.jpeg','./cards/15.jpg','./cards/16.jpg','./cards/1.jpeg', './cards/2.jpeg','./cards/3.jpeg','./cards/4.jpeg','./cards/5.jpeg','./cards/6.jpeg','./cards/7.jpeg','./cards/8.jpeg','./cards/9.png','./cards/10.jpeg','./cards/11.jpeg','./cards/12.jpg','./cards/13.jpg','./cards/14.jpeg','./cards/15.jpg','./cards/16.jpg'];
-
-console.log(backFront);
-for (let index = 0; index < imgcard.length; index++) {
-    var newImage = document.createElement("img");
-    var backCard = document.createElement("img");
-    var backFront= document.createElement("div");
-    backFront.classList.add('backAndFront');
-    newImage.src = imgcard[index];
-    backCard.src = './cards/back.jpg';
-    newImage.classList.add(`frontcard-${index}`);
-   // newImage.classList.add('flipped');
-    backCard.classList.add(`back-${index}`);
-    newImage.setAttribute('data', [index]);  
-    console.log(backFront);
-    document.querySelector("#container").appendChild(backFront);
-    backFront.appendChild(newImage);
-    backFront.appendChild(backCard);
-    newImage.style.width = 150 + "px";
-    newImage.style.height = 150 + "px";
-    backCard.style.width = 150 + "px";
-    backCard.style.height = 150 + "px";   
-}
-
-backFront = document.querySelector(".backAndFront");
-backFront.addEventListener('click',displayCard);
-
-
-
-
-
-
-// if user click on open card do nothing and return from the function 
-// if it the first card he click save it and dont flip it-> we need to creat gluble var that equal to null and check if he is null and if save the first to it value
-
-//see if they match 
-// no match----> flip them in 3 sec
-//yes match --> count the number of flip cards
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function chooseThem() {
-    //show the them
-    //whan the user choose one make the image he chosse as the img array
-}
-
-
-
-
-function shuffled() {
-    // shuffled the card
-    //display on screen the shuffled card 
 
 }
 
 
+/*--------adding img to screen-------*/
+function newGame() {
+    shuffle(imgcard);
+    for (let index = 0; index < imgcard.length; index++) {
+        var newImage = document.createElement("img");
+        var backCard = document.createElement("img");
+        var backFront = document.createElement("div");
+        backFront.classList.add('backAndFront');
+        newImage.src = imgcard[index];
+        backCard.src = './cards/back.jpg';
+        newImage.classList.add('frontcard');
+        backCard.classList.add('back');
+        newImage.setAttribute('data', imgcard[index]);
+        console.log(backFront);
+        document.querySelector(".container").appendChild(backFront);
+        backFront.appendChild(newImage);
+        backFront.appendChild(backCard);
+        newImage.style.width = 120 + "px";
+        newImage.style.height = 120 + "px";
+        backCard.style.width = 120 + "px";
+        backCard.style.height = 120 + "px";
+    }
+    event();
+}
+
+/*--------counting the flipp card and if user won display the overlay-------*/
+function count() {
+    let flippedCouplesCount = 0;
+    return function private() {
+        flippedCouplesCount++;
+        console.log("flipped cards " + flippedCouplesCount);
+        if (flippedCouplesCount === 14) {
+            overlayOn();
+        }
+    }
+}
+let countTheFlippCard = count();
+
+function event() {
+    //add EventListener to each img
+    let arrDiv = document.querySelectorAll(".container>div");
+    console.log(arrDiv);
+    for (let index = 0; index < arrDiv.length; index++) {
+        arrDiv[index].addEventListener('click', displayCard);
+        //  arrDiv[index].lastElementChild.classList.add('flipped');
+        //   console.log(arrDiv[index].lastElementChild.classList);
+    }
+    return arrDiv;
+}
+
+function playAgian(arrDiv) {
+    for (let index = 0; index < arrDiv.length; index++) {
+        arrDiv[index].lastElementChild.classList.remove('flipped');
+        console.log(arrDiv[index].lastElementChild.classList);
+    }
+    event();
+    overlayOff();
+    shuffle(imgcard);
+}
 
 
+function overlayOn(arrDiv) {
+    document.getElementById("overlay").style.display = "block";
+    document.querySelector("#text").addEventListener('click', playAgian);
+}
+function overlayOff() {
+    document.getElementById("overlay").style.display = "none";
+}
 
-
-
+newGame();
